@@ -1,0 +1,36 @@
+
+<!-- kyc.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>KYC - Bras Haïti</title>
+</head>
+<body>
+
+<h1>Formulaire KYC</h1>
+
+<form action="verifier-kyc.php" method="POST" enctype="multipart/form-data">
+    <label>Nom Complet:</label><br>
+    <input type="text" name="nom" required><br><br>
+
+    <label>Numéro de Téléphone:</label><br>
+    <input type="text" name="telephone" 
+
+required><br><br>
+
+    <label>Carte d'identité:</label><br>
+    <input type="file" name="id_photo" required><br><br>
+
+    <label>Preuve d'adresse:</label><br>
+    <input type="file" name="adresse_photo" required><br><br>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
+
+
+
+

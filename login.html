@@ -5,46 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Bras Haïti</title>
     <style>
-        /* Teknik Flexbox pou santre tout bagay */
         body {
             background-color: #004aad;
             color: white;
             font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px; /* Ajoute padding sou kote pou telefòn */
             margin: 0;
-            
-            /* Sa yo se liy majik pou santre a */
-            display: flex;
-            flex-direction: column; /* Mete tit la anlè fòm nan */
-            justify-content: center; /* Santre vètikalman */
-            align-items: center;    /* Santre orizontalman */
-            min-height: 100vh;      /* Pran tout wotè ekran an */
-            
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            margin-bottom: 20px;
         }
         
         .form-container {
             background-color: #f7c600;
             padding: 30px;
             border-radius: 15px;
+            display: inline-block;
+            /* Sa fè l pran 100% sou telefòn men li pa janm depase 400px sou laptop */
             width: 100%;
             max-width: 400px; 
-            box-sizing: border-box;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.2); /* Yon ti lonbraj pou l parèt byen */
+            box-sizing: border-box; /* Pou padding pa debòde */
         }
 
         input {
             padding: 12px;
-            margin: 10px 0;
+            margin: 10px 0; /* Chanje margin an vètikal sèlman */
             border: none;
             border-radius: 5px;
+            /* Fè input yo pran tout lajè bwat jòn nan */
             width: 100%; 
             box-sizing: border-box; 
-            font-size: 16px;
+            font-size: 16px; /* Evite zoom otomatik sou iPhone */
         }
 
         button {
@@ -54,32 +43,32 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            width: 100%; /* Bouton an ap pi fasil pou klike sou telefòn */
             font-size: 16px;
             font-weight: bold;
             margin-top: 10px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #003580; /* Koulè a vin pi fon lè w pase sou li */
         }
 
         p {
-            color: #004aad;
-            margin-top: 20px;
+            color: #004aad; /* Chanje koulè tèks la pou moun ka li l sou fon jòn nan */
         }
 
         a {
             color: #004aad;
             font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Si ekran an piti anpil (telefòn), nou redui espas anwo a */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
-
     <h1>Se connecter</h1>
-
     <div class="form-container">
         <form action="login.php" method="POST">
             <input type="email" name="email" placeholder="Adresse Email" required>
@@ -88,6 +77,5 @@
         </form>
         <p>Pas encore de compte? <a href="signup.html">Créer un compte</a></p>
     </div>
-
 </body>
 </html>
